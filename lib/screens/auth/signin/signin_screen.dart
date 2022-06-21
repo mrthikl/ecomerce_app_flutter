@@ -7,6 +7,7 @@ import 'package:ecommerce_app/@share/widget/scaffold/custom_caffold.dart';
 import 'package:ecommerce_app/resources/color.resource.dart';
 import 'package:ecommerce_app/resources/image.resource.dart';
 import 'package:ecommerce_app/screens/auth/signup/signup_screen.dart';
+import 'package:ecommerce_app/screens/main/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -62,7 +63,10 @@ class SignInScreen extends StatelessWidget {
             child: RoundedButton(
                 color: MyColor.kPrimaryColor,
                 text: "Login".toUpperCase(),
-                onPressed: () {}),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => MainScreen()));
+                }),
           ),
           20.h.heightBox,
           FadeinAnimation(

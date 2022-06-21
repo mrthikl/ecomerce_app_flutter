@@ -4,6 +4,10 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent, // transparent status bar
+  ));
   runApp(const MyApp());
 }
 
@@ -24,17 +28,6 @@ class MyApp extends StatelessWidget {
               FocusManager.instance.primaryFocus?.unfocus();
             },
             child: MaterialApp(
-              theme: ThemeData(
-                appBarTheme: AppBarTheme(
-                  systemOverlayStyle: SystemUiOverlayStyle(
-                    statusBarColor: Colors.transparent,
-                    // For Android (dark icons)
-                    systemNavigationBarIconBrightness: Brightness.dark,
-                    // For iOS (dark icons)
-                    statusBarBrightness: Brightness.dark,
-                  ),
-                ),
-              ),
               debugShowCheckedModeBanner: false,
               home: SignInScreen(),
             ),
