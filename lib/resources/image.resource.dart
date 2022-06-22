@@ -8,4 +8,5 @@ class MyImage {
   static const login = "$base_asset/login.svg";
   static const signup = "$base_asset/signup.svg";
   static const chat = "$base_asset/chat.svg";
+  static const draw_banner = "$base_asset/draw2.png";
 }

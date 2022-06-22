@@ -1,15 +1,21 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'color.resource.dart';
 
 class MyStyle {
-  // static TextStyle typeLight = TextStyle(
-  //     fontSize: 14.sp, color: MyColor.grayDark, fontFamily: MyFont.light);
+  static TextStyle typeLight = TextStyle(
+      fontSize: 14.sp, color: MyColor.black, fontWeight: FontWeight.normal);
 
-  // static TextStyle typeRegular = TextStyle(
-  //     fontSize: 14.sp, color: MyColor.black, fontFamily: MyFont.regular);
+  static TextStyle typeRegular = TextStyle(
+      fontSize: 14.sp, color: MyColor.black, fontWeight: FontWeight.w300);
 
-  // static TextStyle typeRegularWhite = TextStyle(
-  //     fontSize: 14.sp, color: MyColor.white, fontFamily: MyFont.regular);
+  static TextStyle typeMedium = TextStyle(
+      fontSize: 14.sp, color: MyColor.black, fontWeight: FontWeight.w400);
 
-  // static TextStyle typeMedium = TextStyle(
-  //     fontSize: 14.sp, color: MyColor.black, fontFamily: MyFont.medium);
+  static TextStyle typeBold = TextStyle(
+      fontSize: 14.sp, color: MyColor.black, fontWeight: FontWeight.w700);
+
+  static TextStyle typeSemiBold = TextStyle(
+      fontSize: 14.sp, color: MyColor.black, fontWeight: FontWeight.w600);
 }

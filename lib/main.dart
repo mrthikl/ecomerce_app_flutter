@@ -7,6 +7,8 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
     statusBarColor: Colors.transparent, // transparent status bar
+    statusBarBrightness: Brightness.dark,
+    statusBarIconBrightness: Brightness.dark,
   ));
   runApp(const MyApp());
 }
@@ -16,9 +18,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-        //navigation bar icons' color
-        ));
     return ScreenUtilInit(
         designSize: const Size(375, 812),
         minTextAdapt: true,
