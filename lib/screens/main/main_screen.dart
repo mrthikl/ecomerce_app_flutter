@@ -1,6 +1,7 @@
 import 'package:animations/animations.dart';
 import 'package:ecommerce_app/resources/color.resource.dart';
 import 'package:ecommerce_app/screens/main/cart/cart_screen.dart';
+import 'package:ecommerce_app/screens/main/detail/detail_screen.dart';
 import 'package:ecommerce_app/screens/main/home/home_screen.dart';
 import 'package:ecommerce_app/screens/main/profile/profile_screen.dart';
 import 'package:ecommerce_app/screens/main/search/search_screen.dart';

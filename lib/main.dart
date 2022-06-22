@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/screens/auth/signin/signin_screen.dart';
+import 'package:ecommerce_app/screens/main/detail/detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
             child: MaterialApp(
               debugShowCheckedModeBanner: false,
               home: SignInScreen(),
+              // home: DetailScreen(),
             ),
           );
         });

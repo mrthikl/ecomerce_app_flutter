@@ -1,5 +1,6 @@
 import 'package:ecommerce_app/resources/color.resource.dart';
 import 'package:ecommerce_app/resources/style.resource.dart';
+import 'package:ecommerce_app/screens/main/detail/detail_screen.dart';
 import 'package:ecommerce_app/screens/main/home/home_controller.dart';
 import 'package:ecommerce_app/screens/main/main_screen.dart';
 import 'package:flutter/material.dart';
@@ -172,22 +173,38 @@ class _HomeScreenState extends State<HomeScreen> {
                     itemCount: controller.itemsCardInfo.length,
                     itemBuilder: (context, index) => VxBox(
                                 child: VStack([
-                          VxBox()
-                              .width(300.w)
-                              .height(300.h)
-                              .withDecoration(BoxDecoration(
-                                borderRadius: BorderRadius.circular(24.w),
-                                image: DecorationImage(
-                                    image: NetworkImage(controller
-                                        .itemsCardInfo[index].urlImage),
-                                    fit: BoxFit.cover),
-                              ))
-                              .make()
-                              .marginOnly(bottom: 16.h),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => DetailScreen(
+                                          item: controller
+                                              .itemsCardInfo[index])));
+                            },
+                            child: Hero(
+                              transitionOnUserGestures: true,
+                              tag: controller.itemsCardInfo[index],
+                              child: VxBox()
+                                  .width(300.w)
+                                  .height(300.h)
+                                  .withDecoration(BoxDecoration(
+                                    borderRadius: BorderRadius.circular(24.w),
+                                    image: DecorationImage(
+                                        image: NetworkImage(controller
+                                            .itemsCardInfo[index].urlImage),
+                                        fit: BoxFit.cover),
+                                  ))
+                                  .make()
+                                  .marginOnly(bottom: 16.h),
+                            ),
+                          ),
                           HStack(
                             [
                               VStack([
-                                controller.itemsCardInfo[index].title.text
+                                controller.itemsCardInfo[index].title
+                                    .toString()
+                                    .text
                                     .textStyle(MyStyle.typeSemiBold)
                                     .make(),
                                 5.h.heightBox,
